@@ -1,0 +1,9 @@
+data:
+    -
+      tc.title: 第一个测试用例
+      tc.group: [aaa,bbb,ccc]
+      tc.executor: Ares
+    -
+      tc.title: 2
+      tc.group: [aaa,bbb,ccc]
+      tc.executor: Ares
