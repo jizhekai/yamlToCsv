@@ -23,6 +23,7 @@ def readYaml():
     fcsv = open('./data/'+ sys.argv[1] +'/' + sys.argv[1] +'.csv','w+',encoding='utf-8-sig',newline="")
     f_csv = csv.writer(fcsv)
     f_csv.writerow(['tc.title','tc.group','tc.executor','tc.precondition','tc.step.desc','tc.step.expected','tc.caseType','tc.priority'])
+    f_csv.writerow('\n')
     for line in lines:
         f_csv.writerow(line)
 
