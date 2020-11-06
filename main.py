@@ -1,9 +1,13 @@
 import yaml
 import csv
+import sys
 import os
 
 def readYaml():
-    file_path  = './data/data.yaml'
+    dirname = './data/'+ sys.argv[1]
+    if not os.path.exists(dirname):
+        os.mkdir(dirname)
+    file_path  = './data/'+ sys.argv[1] +'/' + sys.argv[1] +'.yaml'
     with open(file_path,'r',encoding='utf-8-sig') as f:
         data = yaml.load(f,yaml.FullLoader)['data']
         lines = []
@@ -16,8 +20,9 @@ def readYaml():
             lines.append(line)
     f.close()
             
-    fcsv = open('./data/data.csv','a+',encoding='utf-8-sig',newline="")
+    fcsv = open('./data/'+ sys.argv[1] +'/' + sys.argv[1] +'.csv','w+',encoding='utf-8-sig',newline="")
     f_csv = csv.writer(fcsv)
+    f_csv.writerow(['tc.title','tc.group','tc.executor','tc.precondition','tc.step.desc','tc.step.expected','tc.caseType','tc.priority'])
     for line in lines:
         f_csv.writerow(line)
 
