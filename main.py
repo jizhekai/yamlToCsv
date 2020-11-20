@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 import yaml
 import csv
 import sys
@@ -24,6 +26,7 @@ def readYaml():
     f_csv = csv.writer(fcsv)
     f_csv.writerow(['tc.title','tc.group','tc.executor','tc.precondition','tc.step.desc','tc.step.expected','tc.caseType','tc.priority'])
     f_csv.writerow('\n')
+    print('测试用例数量：',len(lines))
     for line in lines:
         f_csv.writerow(line)
 
