@@ -1,13 +1,13 @@
 data:
-    -
-      title: xxx
-      group: project|group|subgroup
-      executor: author
-      precondition: 
-        - precondition1
-      step.desc: 
-        - desc1
-      step.expected: 
-        - expected1
-      caseType: caseType
-      priority: priority
+  -
+    title: xxx
+    group: project|group|subgroup
+    executor: author
+    precondition: 
+      - precondition1
+    step.desc: 
+      - desc1
+    step.expected: 
+      - expected1
+    caseType: caseType
+    priority: priority
